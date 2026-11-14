@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "import", "promise"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "pedantic": "error",
+    "perf": "error"
+  },
+  "rules": {
+    "eslint/max-lines": "off",
+    "eslint/max-lines-per-function": "off",
+    "eslint/no-inline-comments": "off",
+    "unicorn/prefer-code-point": "off",
+    "eslint/no-shadow": ["error", { "allow": ["_"] }],
+
+    "eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrors": "all" }
+    ],
+    "eslint/no-var": "error",
+    "eslint/prefer-const": "error",
+    "eslint/object-shorthand": "error",
+    "eslint/no-useless-rename": "error",
+    "eslint/no-useless-computed-key": "error",
+    "eslint/prefer-template": "error",
+    "eslint/eqeqeq": "error",
+    "import/no-duplicates": "error",
+    "import/no-self-import": "error",
+    "import/no-cycle": "error",
+    "import/first": "error",
+    "typescript/consistent-type-imports": ["error", { "fixStyle": "inline-type-imports" }],
+    "typescript/no-import-type-side-effects": "error",
+    "typescript/consistent-type-definitions": ["error", "interface"],
+    "typescript/array-type": "error",
+    "typescript/no-inferrable-types": "error",
+    "unicorn/prefer-node-protocol": "error"
+  },
+  "ignorePatterns": ["dist"]
+}
